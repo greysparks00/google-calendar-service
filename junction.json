@@ -1,0 +1,18 @@
+{
+    "name": "google-calendar-service",
+    "runtime": {
+        "port": 8083,
+        "install": ["uv", "sync"],
+        "command": [
+            "uv", "run", "uvicorn", "main:app",
+            "--host", "127.0.0.1",
+            "--port", "8083"
+        ]
+    },
+    "routing": {
+        "prefix": "/googlecalendar"
+    },
+    "health": {
+        "path": "/health"
+    }
+}
